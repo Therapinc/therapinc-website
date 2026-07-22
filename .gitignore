@@ -6,10 +6,11 @@
 # Testing
 /coverage
 
-# Next.js build output
+# Next.js & TypeScript build output
 /.next/
 /out/
 /build
+*.tsbuildinfo
 
 # Production & Local Environment Variables
 .env
