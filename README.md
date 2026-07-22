@@ -112,6 +112,4 @@ Zero-configuration deployment. Connect your GitHub repository to Vercel and add 
 
 ---
 
-## 📄 License
 
-[MIT License](LICENSE)
