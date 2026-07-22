@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: therapinc-website
+    env: node
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.18.0
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CONTACT_NOTIFICATION_EMAIL
+        sync: false
