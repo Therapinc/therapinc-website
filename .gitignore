@@ -8,6 +8,8 @@
 
 # Next.js & TypeScript build output
 /.next/
+/.next-dev/
+/.next-old*/
 /out/
 /build
 *.tsbuildinfo

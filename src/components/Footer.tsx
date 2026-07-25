@@ -6,9 +6,9 @@ import { Sparkles, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="glass-card border-t border-white/10 pt-16 pb-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
+    <footer className="border-t border-gray-100 bg-white py-16">
+      <div className="mx-auto max-w-[1550px] px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-8">
           <div className="md:col-span-2">
             <Link
               href="/"

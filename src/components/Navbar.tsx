@@ -1,46 +1,122 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight, Box } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="glass-card fixed top-0 right-0 left-0 z-50 border-b border-white/10">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
+        scrolled ? 'border-b border-gray-100 bg-white/90 backdrop-blur-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="mx-auto flex max-w-[1550px] items-center justify-between px-[var(--spacing-md)] py-3 lg:px-[var(--spacing-lg)]">
+        {/* Static Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold tracking-tight text-white"
+          className="group relative -mt-[1px] -ml-[16px] flex items-center gap-1 overflow-hidden rounded-xl px-2"
         >
-          <div className="rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-2 shadow-lg shadow-indigo-500/30">
-            <Sparkles className="h-5 w-5 text-white" />
+          {/* Constant Glaze Shine Loop */}
+          <div className="pointer-events-none absolute inset-0 z-30">
+            <div className="animate-shine absolute top-0 bottom-0 w-[50%] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
           </div>
-          <span className="text-xl font-extrabold tracking-tight">
-            Therap<span className="text-indigo-400">inc</span>
-          </span>
+          <div className="z-10 flex items-center justify-center bg-transparent transition-colors">
+            <img
+              src="/logosvg.svg"
+              alt="TherapInc Icon"
+              className="h-[60px] w-auto object-contain"
+            />
+          </div>
+
+          {/* Letter-by-Letter Text Reveal */}
+          <div className="mt-4 -ml-[3px] flex items-center overflow-hidden">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
+                hidden: {},
+              }}
+              className="flex items-center pb-1 font-sans text-[2rem] font-semibold tracking-tight"
+              style={{ color: '#200A67' }}
+            >
+              {/* "Therap" */}
+              {Array.from('Therap').map((letter, i) => (
+                <motion.span
+                  key={`therap-${i}`}
+                  variants={{
+                    hidden: { x: -20, opacity: 0 },
+                    visible: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } },
+                  }}
+                  className={`inline-block ${letter === 'T' ? 'text-[1.1em]' : ''}`}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+
+              {/* "Inc" */}
+              <span className="ml-[2px] inline-flex items-center">
+                {Array.from('Inc').map((letter, i) => (
+                  <motion.span
+                    key={`inc-${i}`}
+                    variants={{
+                      hidden: { x: -20, opacity: 0 },
+                      visible: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } },
+                    }}
+                    className={`inline-block ${letter === 'I' ? 'text-[1.1em]' : ''}`}
+                    style={{
+                      color: '#d946ef',
+                    }} /* Solid bright purple/pink to fix invisible text bug */
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+            </motion.div>
+          </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-300 md:flex">
-          <Link href="#features" className="transition-colors hover:text-white">
+        {/* Navigation Links */}
+        <nav className="hidden items-center gap-[var(--spacing-xl)] text-sm font-medium text-gray-600 md:flex">
+          <Link href="/" className="font-semibold text-[var(--color-primary)] transition-colors">
+            Home
+          </Link>
+          <Link href="#features" className="transition-colors hover:text-[var(--color-primary)]">
             Features
           </Link>
-          <Link href="#solutions" className="transition-colors hover:text-white">
+          <Link href="#solutions" className="transition-colors hover:text-[var(--color-primary)]">
             Solutions
           </Link>
-          <Link href="#about" className="transition-colors hover:text-white">
+          <Link href="#about" className="transition-colors hover:text-[var(--color-primary)]">
             About Us
           </Link>
-          <Link href="#contact" className="transition-colors hover:text-white">
+          <Link href="#resources" className="transition-colors hover:text-[var(--color-primary)]">
+            Resources
+          </Link>
+          <Link href="#contact" className="transition-colors hover:text-[var(--color-primary)]">
             Contact
           </Link>
         </nav>
 
-        <div className="flex items-center gap-4">
+        {/* CTA Button */}
+        <div className="flex items-center">
           <Link
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition-all hover:scale-105 hover:from-blue-500 hover:to-indigo-500"
+            href="#demo"
+            className="inline-flex items-center gap-[var(--spacing-xs)] rounded-[var(--radius-full)] bg-gradient-to-r from-[#200A67] via-[#581c87] to-[#c026d3] px-[var(--spacing-lg)] py-[var(--spacing-sm)] text-sm font-medium text-white shadow-sm transition-all hover:scale-105 hover:opacity-90"
           >
-            Get Started <ArrowRight className="h-4 w-4" />
+            Book a Demo <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

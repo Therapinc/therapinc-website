@@ -1,13 +1,13 @@
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import ContactForm from '@/components/ContactForm';
+import Hero from '@/components/Hero/index';
+import FeatureGrid from '@/components/FeatureGrid';
+import DashboardShowcase from '@/components/Dashboard';
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col bg-white">
       <Hero />
-      <Features />
-      <ContactForm />
+      <FeatureGrid />
+      <DashboardShowcase />
     </div>
   );
 }
