@@ -4,8 +4,8 @@ import { ArrowRight, PlayCircle, ShieldCheck, HeartHandshake, Zap } from 'lucide
 
 export default function HeroContent() {
   return (
-    <div className="relative z-10 max-w-[42rem]">
-      <h1 className="animate-fade-in-up font-heading bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-4xl leading-[1.1] font-extrabold tracking-tight text-transparent sm:text-5xl lg:whitespace-nowrap xl:text-[3.5rem]">
+    <div className="relative z-10 max-w-4xl">
+      <h1 className="animate-fade-in-up font-heading bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-4xl leading-[1.1] font-extrabold tracking-tight text-transparent sm:text-5xl lg:text-4xl xl:text-5xl">
         Everything special schools need. <br />
         <span className="bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-accent)] bg-clip-text text-transparent">
           One intelligent platform.

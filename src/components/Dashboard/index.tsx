@@ -17,7 +17,7 @@ import {
 
 export default function DashboardShowcase() {
   return (
-    <section className="relative overflow-hidden bg-white py-[var(--spacing-3xl)] md:py-32">
+    <section className="relative bg-white py-[var(--spacing-3xl)] md:py-32">
       <DashboardBackground />
 
       {/* Playful Educational Background Shapes */}
@@ -28,14 +28,14 @@ export default function DashboardShowcase() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1550px] px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]">
-        <div className="mb-[var(--spacing-3xl)] flex flex-col items-center gap-[var(--spacing-lg)] xl:flex-row xl:gap-[var(--spacing-xl)]">
-          {/* Static Image Placeholder (Far Left) */}
-          <div className="flex h-[300px] w-full shrink-0 items-center justify-center rounded-3xl border-2 border-dashed border-gray-200 bg-gray-50/50 xl:w-3/12">
-            <span className="px-4 text-center text-sm font-medium text-gray-400">
-              Static Image
-              <br />
-              Reserved Space
-            </span>
+        <div className="mb-[var(--spacing-3xl)] -mt-[250px] flex flex-col items-center gap-[var(--spacing-lg)] xl:flex-row xl:gap-[var(--spacing-xl)]">
+          {/* Static Image (Far Left) */}
+          <div className="relative flex w-full shrink-0 items-center justify-center -ml-[87px] xl:w-3/12">
+            <img
+              src="/middle.png"
+              alt="Feature Showcase"
+              className="w-full scale-[1.2] object-contain"
+            />
           </div>
 
           {/* Section Heading (Middle Left) */}
@@ -43,9 +43,9 @@ export default function DashboardShowcase() {
             <h2 className="font-heading mb-[var(--spacing-xs)] text-sm font-semibold tracking-widest text-[var(--color-accent)] uppercase">
               Educator Portal
             </h2>
-            <p className="font-heading text-3xl leading-tight font-extrabold tracking-tight text-[var(--color-primary)] sm:text-4xl xl:text-5xl">
+            <p className="font-heading text-2xl leading-tight font-bold tracking-tight text-gray-900 lg:text-3xl xl:text-4xl">
               Support every student. <br />
-              <span className="text-[var(--color-secondary)]">Empower your staff.</span>
+              <span className="font-semibold text-[var(--color-primary)]">Empower your staff.</span>
             </p>
           </div>
 

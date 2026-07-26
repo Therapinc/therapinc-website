@@ -26,7 +26,7 @@ export default function Navbar() {
         {/* Static Logo */}
         <Link
           href="/"
-          className="group relative -mt-[1px] -ml-[16px] flex items-center gap-1 overflow-hidden rounded-xl px-2"
+          className="group relative -mt-[1px] -ml-[35px] flex items-center gap-1 overflow-hidden rounded-xl px-2"
         >
           {/* Constant Glaze Shine Loop */}
           <div className="pointer-events-none absolute inset-0 z-30">
@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
           <div className="z-10 flex items-center justify-center bg-transparent transition-colors">
             <img
-              src="/logosvg.svg"
+              src="/logosvg.svg?v=2"
               alt="TherapInc Icon"
               className="h-[60px] w-auto object-contain"
             />

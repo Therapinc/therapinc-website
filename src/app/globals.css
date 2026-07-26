@@ -58,11 +58,11 @@
   @keyframes float3d {
     0%,
     100% {
-      transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) translateY(0px) scale(1.05);
+      transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) translateY(0px) scale(0.95);
     }
 
     50% {
-      transform: perspective(1200px) rotateY(-6deg) rotateX(8deg) translateY(-20px) scale(1.05);
+      transform: perspective(1200px) rotateY(-6deg) rotateX(8deg) translateY(-20px) scale(0.95);
     }
   }
 
