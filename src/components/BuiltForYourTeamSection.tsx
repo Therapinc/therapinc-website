@@ -32,7 +32,7 @@ export default function BuiltForYourTeamSection() {
             </h2>
           </div>
           <p className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
-            Whoever's using it, it fits.
+            Whoever&apos;s using it, it fits.
           </p>
         </div>
 

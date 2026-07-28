@@ -2,18 +2,6 @@
 
 import React from 'react';
 import DashboardBackground from './DashboardBackground';
-import DashboardCard from '../ui/DashboardCard';
-import {
-  Home,
-  Users,
-  Folder,
-  MessageSquare,
-  Settings,
-  ArrowRight,
-  CircleCheck,
-  Activity,
-  CheckCircle,
-} from 'lucide-react';
 
 export default function DashboardShowcase() {
   return (

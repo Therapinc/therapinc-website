@@ -12,9 +12,9 @@ export default function Footer() {
         <div className="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column - Brand */}
           <div className="lg:col-span-5">
-            <Link href="/" className="mb-6 flex items-center gap-3 text-[var(--color-primary)]">
-              <img src="/logosvg.svg" alt="TherapInc Logo" className="h-10 w-10 object-contain" />
-              <span className="font-heading text-2xl font-bold tracking-tight">TherapInc</span>
+            <Link href="/" className="mb-6 flex items-center gap-4 text-[var(--color-primary)]">
+              <img src="/logosvg.svg" alt="TherapInc Logo" className="h-16 w-16 object-contain" />
+              <span className="font-heading text-3xl font-bold tracking-tight">TherapInc</span>
             </Link>
             <p className="w-full whitespace-normal break-normal text-sm leading-relaxed text-gray-600" style={{ maxWidth: '320px' }}>
               Built for special education, everywhere.

@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Therapinc | AI-Powered Mental Healthcare Solutions',
+  title: 'TherapInc',
   description:
     'Therapinc provides intelligent AI solutions and automated clinical workflow tools for mental healthcare professionals and practices.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'Therapinc',
   ],
   openGraph: {
-    title: 'Therapinc | AI-Powered Mental Healthcare Solutions',
+    title: 'TherapInc',
     description:
       'Empowering therapists with intelligent, HIPAA-compliant session documentation and client management tools.',
     type: 'website',

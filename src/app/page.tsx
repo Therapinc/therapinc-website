@@ -7,7 +7,6 @@ import BuiltForYourTeamSection from '@/components/BuiltForYourTeamSection';
 import SecuritySection from '@/components/SecuritySection';
 import FaqSection from '@/components/FaqSection';
 import PricingSection from '@/components/PricingSection';
-import DashboardShowcase from '@/components/Dashboard';
 
 export default function Home() {
   return (
