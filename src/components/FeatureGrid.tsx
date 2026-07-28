@@ -11,7 +11,6 @@ import {
   Users,
   Activity,
 } from 'lucide-react';
-import FeatureCard from './ui/FeatureCard';
 
 const features = [
   {
@@ -85,7 +84,7 @@ export default function FeatureGrid() {
             </h2>
           </div>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl" style={{ fontFamily: 'var(--font-heading)' }}>
-            One platform. Every part of your school's day.
+            One platform. Every part of your school&apos;s day.
           </p>
           <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
             Everything your staff, admins, and parents need — built around how special schools actually run.

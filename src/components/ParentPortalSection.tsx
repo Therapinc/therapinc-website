@@ -17,7 +17,7 @@ export default function ParentPortalSection() {
             </div>
             
             <h3 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl">
-              Parents shouldn't have to wait for a meeting to know how their child is doing.
+              Parents shouldn&apos;t have to wait for a meeting to know how their child is doing.
             </h3>
             
             <p className="mb-10 text-lg leading-relaxed text-purple-200">

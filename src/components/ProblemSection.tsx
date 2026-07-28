@@ -37,7 +37,7 @@ export default function ProblemSection() {
           </p>
           <p className="mt-8 text-lg leading-relaxed text-gray-600 sm:text-xl">
             Most school software is built for standard report cards and roll-call attendance. Your
-            students, staff, and reports don't work that way — so most special schools are still stuck
+            students, staff, and reports don&apos;t work that way — so most special schools are still stuck
             writing daily therapy notes by hand and re-typing the same records year after year.
           </p>
         </div>

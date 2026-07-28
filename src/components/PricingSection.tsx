@@ -20,7 +20,7 @@ export default function PricingSection() {
             </h3>
             
             <p className="mx-auto mb-10 w-full whitespace-normal break-normal text-base leading-relaxed text-gray-600 sm:text-lg">
-              Pricing is based on your school's size and needs — not per-parent upsells. Book a quick call and we'll set up a plan that fits your staff and student count.
+              Pricing is based on your school&apos;s size and needs — not per-parent upsells. Book a quick call and we&apos;ll set up a plan that fits your staff and student count.
             </p>
 
             <button className="mt-auto rounded-full bg-[var(--color-primary)] px-8 py-4 font-bold text-white transition-transform hover:scale-105 hover:bg-[var(--color-secondary)]">

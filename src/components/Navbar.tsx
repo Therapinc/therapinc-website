@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Box } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {

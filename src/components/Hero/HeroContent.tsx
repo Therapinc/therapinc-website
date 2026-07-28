@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, PlayCircle, ShieldCheck, HeartHandshake, Zap } from 'lucide-react';
+import { ArrowRight, PlayCircle } from 'lucide-react';
 
 export default function HeroContent() {
   return (
