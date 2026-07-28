@@ -9,7 +9,7 @@ export default function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-visible">
       {/* The left graphic (User provided) */}
-      <div className="absolute top-[-79px] left-[-27px] z-10 w-[250px] -translate-x-[20%] opacity-90 lg:top-[-39px] lg:w-[450px] xl:w-[550px] xl:-translate-x-[15%]">
+      <div className="absolute top-[-79px] left-[-27px] z-10 w-[250px] -translate-x-[20%] opacity-[.87] lg:top-[-39px] lg:w-[450px] xl:w-[550px] xl:-translate-x-[15%]">
         <img
           src="/leftyyyy.png"
           alt="Left Graphic"
@@ -20,7 +20,7 @@ export default function HeroBackground() {
       {/* The main hero graphic, anchored to the right */}
       <div
         id="hero-background-svg"
-        className="absolute top-[80px] right-0 h-[600px] w-full max-w-[800px] lg:top-0 lg:h-[1000px] lg:max-w-[1250px] lg:translate-x-[10%]"
+        className="absolute top-[80px] right-0 h-[600px] w-full max-w-[800px] opacity-90 contrast-[.95] lg:top-0 lg:h-[1000px] lg:max-w-[1250px] lg:translate-x-[10%]"
       >
         <img
           src="/hero-graphic.png"

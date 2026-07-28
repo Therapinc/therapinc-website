@@ -2,90 +2,75 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-white py-16">
-      <div className="mx-auto max-w-[1550px] px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-8">
-          <div className="md:col-span-2">
-            <Link
-              href="/"
-              className="mb-4 flex items-center gap-2 text-xl font-bold tracking-tight text-white"
-            >
-              <div className="rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-2 shadow-lg shadow-indigo-500/30">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-extrabold tracking-tight">
-                Therap<span className="text-indigo-400">inc</span>
-              </span>
+    <footer className="w-full bg-[#F4F3ED] py-16 sm:py-24">
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+        
+        <div className="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+          {/* Left Column - Brand */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="mb-6 flex items-center gap-3 text-[var(--color-primary)]">
+              <img src="/logosvg.svg" alt="TherapInc Logo" className="h-10 w-10 object-contain" />
+              <span className="font-heading text-2xl font-bold tracking-tight">TherapInc</span>
             </Link>
-            <p className="max-w-sm text-sm leading-relaxed text-gray-400">
-              Empowering mental healthcare providers with safe, intelligent AI tools designed to
-              streamline practice workflows and elevate patient outcome tracking.
+            <p className="w-full whitespace-normal break-normal text-sm leading-relaxed text-gray-600" style={{ maxWidth: '320px' }}>
+              Built for special education, everywhere.
             </p>
           </div>
 
-          <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">
-              Navigation
-            </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
-              <li>
-                <Link href="#features" className="transition-colors hover:text-white">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="#solutions" className="transition-colors hover:text-white">
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="#about" className="transition-colors hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="transition-colors hover:text-white">
-                  Contact Support
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Links Columns */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
+            {/* Product */}
+            <div className="flex flex-col">
+              <h4 className="mb-6 text-xs font-bold tracking-widest text-gray-900 uppercase">
+                Product
+              </h4>
+              <ul className="flex flex-col gap-4 text-sm font-medium text-gray-600">
+                <li><Link href="#features" className="transition-colors hover:text-[var(--color-primary)]">Features</Link></li>
+                <li><Link href="#how-it-works" className="transition-colors hover:text-[var(--color-primary)]">How it works</Link></li>
+                <li><Link href="#security" className="transition-colors hover:text-[var(--color-primary)]">Security</Link></li>
+                <li><Link href="#pricing" className="transition-colors hover:text-[var(--color-primary)]">Pricing</Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">
-              Legal & Privacy
-            </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
-              <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  HIPAA Security Statement
-                </a>
-              </li>
-            </ul>
+            {/* Company */}
+            <div className="flex flex-col">
+              <h4 className="mb-6 text-xs font-bold tracking-widest text-gray-900 uppercase">
+                Company
+              </h4>
+              <ul className="flex flex-col gap-4 text-sm font-medium text-gray-600">
+                <li><Link href="#about" className="transition-colors hover:text-[var(--color-primary)]">About</Link></li>
+                <li><Link href="#contact" className="transition-colors hover:text-[var(--color-primary)]">Contact</Link></li>
+                <li><Link href="#careers" className="transition-colors hover:text-[var(--color-primary)]">Careers</Link></li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div className="flex flex-col">
+              <h4 className="mb-6 text-xs font-bold tracking-widest text-gray-900 uppercase">
+                Legal
+              </h4>
+              <ul className="flex flex-col gap-4 text-sm font-medium text-gray-600">
+                <li><Link href="#privacy" className="transition-colors hover:text-[var(--color-primary)]">Privacy policy</Link></li>
+                <li><Link href="#terms" className="transition-colors hover:text-[var(--color-primary)]">Terms of service</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-gray-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} Therapinc Inc. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Built with <Heart className="h-3.5 w-3.5 fill-pink-500 text-pink-500" /> for therapy
-            professionals.
+        {/* Bottom Bar */}
+        <div className="flex flex-col-reverse items-start justify-between gap-6 border-t border-gray-200 pt-8 sm:flex-row sm:items-center">
+          <p className="text-xs font-medium text-gray-500">
+            © {new Date().getFullYear()} TherapInc. All rights reserved.
+          </p>
+          <p className="text-xs font-medium text-gray-500">
+            Made for special schools, everywhere.
           </p>
         </div>
+
       </div>
     </footer>
   );
