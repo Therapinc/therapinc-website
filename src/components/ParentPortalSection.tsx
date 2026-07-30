@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import AnimatedPhoneMockup from './ParentPortal/AnimatedPhoneMockup';
 
 export default function ParentPortalSection() {
   return (
@@ -45,51 +46,7 @@ export default function ParentPortalSection() {
           </div>
 
           {/* Right Column: Phone Mockup */}
-          <div className="flex w-full items-center justify-center lg:justify-end lg:-translate-x-[75px]">
-            {/* Phone Frame */}
-            <div className="relative flex w-[340px] flex-col rounded-[40px] bg-[#F4F3ED] p-4 pt-10 shadow-2xl ring-8 ring-white/10 sm:w-[380px]">
-              {/* Speaker notch */}
-              <div className="absolute top-4 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-gray-300"></div>
-
-              <div className="flex flex-col gap-4">
-                {/* Card 1 */}
-                <div className="rounded-2xl bg-white p-5 shadow-sm">
-                  <div className="mb-1 text-xs font-semibold text-gray-400">Today, 11:20 AM</div>
-                  <h4 className="mb-2 font-heading font-bold text-gray-900">Occupational therapy session</h4>
-                  <p className="mb-4 text-xs leading-relaxed text-gray-600">
-                    Priya had a great session today — worked on balance and followed two-step instructions well.
-                  </p>
-                  <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-[10px] font-bold text-green-700">
-                    Great progress
-                  </span>
-                </div>
-
-                {/* Card 2 */}
-                <div className="rounded-2xl bg-white p-5 shadow-sm">
-                  <div className="mb-1 text-xs font-semibold text-gray-400">Today, 9:05 AM</div>
-                  <h4 className="mb-2 font-heading font-bold text-gray-900">Attendance</h4>
-                  <p className="mb-4 text-xs leading-relaxed text-gray-600">
-                    Priya checked in on time for morning class.
-                  </p>
-                  <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-[10px] font-bold text-green-700">
-                    Present
-                  </span>
-                </div>
-
-                {/* Card 3 */}
-                <div className="rounded-2xl bg-white p-5 shadow-sm">
-                  <div className="mb-1 text-xs font-semibold text-gray-400">This week</div>
-                  <h4 className="mb-2 font-heading font-bold text-gray-900">Speech goal — weekly summary</h4>
-                  <p className="mb-4 text-xs leading-relaxed text-gray-600">
-                    3 of 4 sessions completed. Slight improvement in word recall.
-                  </p>
-                  <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-[10px] font-bold text-amber-700">
-                    In progress
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <AnimatedPhoneMockup />
 
         </div>
       </div>
