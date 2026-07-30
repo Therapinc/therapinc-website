@@ -11,7 +11,7 @@ export default function HeroFeatureBar() {
   ];
 
   return (
-    <div className="mt-16 w-full lg:mt-[159px]">
+    <div className="relative z-20 mx-auto mt-4 w-full max-w-[1200px] lg:mt-[109px]">
       <div className="flex w-full flex-col items-center justify-between gap-6 rounded-[2rem] border border-white/30 bg-white/10 px-6 py-8 shadow-xl backdrop-blur-md transition-all hover:bg-white/20 hover:shadow-2xl lg:flex-row lg:gap-4 lg:rounded-full lg:px-12 lg:py-10">
         {items.map((item, idx) => (
           <div

@@ -11,7 +11,7 @@ const securityFeatures = [
 export default function SecuritySection() {
   return (
     <section className="relative w-full overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-8">
 
           {/* Left Column: Content */}

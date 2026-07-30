@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="w-full bg-[#F4F3ED] py-16 sm:py-24">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
         
         <div className="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column - Brand */}

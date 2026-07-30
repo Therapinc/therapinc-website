@@ -74,7 +74,7 @@ const features = [
 export default function FeatureGrid() {
   return (
     <section className="relative w-full -mt-32 overflow-hidden bg-gradient-to-b from-transparent via-[#F8F5FA] to-transparent pt-32 pb-48">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
         {/* Section Header (Top) */}
         <div className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}>
           <div className="mb-6 flex items-center gap-3">

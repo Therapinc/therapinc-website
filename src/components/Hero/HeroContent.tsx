@@ -15,8 +15,7 @@ export default function HeroContent() {
       <div className="animate-fade-in-up mt-[var(--spacing-lg)] font-sans text-sm sm:text-lg leading-relaxed text-gray-600 delay-100 sm:text-xl">
         <p className="font-semibold text-gray-800">Empowering Growth.<br className="sm:hidden" /> Enriching Lives.</p>
         <p className="mt-3 hidden sm:block">
-          Therapinc is the unified platform special schools depend on to streamline operations,
-          manage assets, and empower their heroes.
+          TherapInc unifies school operations, asset management, and staff collaboration into one platform built for special schools.
         </p>
       </div>
 

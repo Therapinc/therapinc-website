@@ -3,7 +3,7 @@ import React from 'react';
 export default function PricingSection() {
   return (
     <section className="relative w-full overflow-hidden bg-gray-50 py-24 sm:py-32">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
         
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Card 1: Pricing */}

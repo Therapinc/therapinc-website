@@ -23,7 +23,7 @@ const problemCards = [
 export default function ProblemSection() {
   return (
     <section className="relative z-20 w-full overflow-hidden bg-white pt-2 pb-40 sm:pt-4 sm:pb-48">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
         {/* Left-Aligned Header Block */}
         <div className="w-full whitespace-normal break-normal" style={{ maxWidth: '768px' }}>
           <div className="mb-6 flex items-center gap-3">

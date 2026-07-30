@@ -22,7 +22,7 @@ const steps = [
 export default function HowItWorksSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#F4F3ED] pt-8 pb-24 sm:pt-12 sm:pb-32">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
         {/* Section Header */}
         <div className="mb-20 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}>

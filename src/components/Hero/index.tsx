@@ -23,7 +23,11 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-[1600px] flex-col px-[var(--spacing-md)] pb-12 lg:px-[var(--spacing-lg)]">
         <div className="grid grid-cols-1 items-start gap-[var(--spacing-2xl)] lg:grid-cols-2 lg:gap-[var(--spacing-xl)]">
           {/* Left Column */}
-          <HeroContent />
+          <div className="flex w-full lg:justify-end">
+            <div className="w-full lg:max-w-[calc(600px-1rem)]">
+              <HeroContent />
+            </div>
+          </div>
 
           {/* Right Column */}
           <HeroDashboard />

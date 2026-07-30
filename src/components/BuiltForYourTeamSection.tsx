@@ -21,7 +21,7 @@ const cards = [
 export default function BuiltForYourTeamSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[var(--color-neutral-soft)] py-24 sm:py-32">
-      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
+      <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
         {/* Section Header */}
         <div className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}>
