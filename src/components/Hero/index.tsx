@@ -9,7 +9,7 @@ import HeroFeatureBar from './HeroFeatureBar';
 
 export default function Hero() {
   return (
-    <section className="relative bg-[var(--color-neutral-light)] pt-[120px] pb-[var(--spacing-lg)] md:pt-[160px]">
+    <section className="relative overflow-hidden bg-[var(--color-neutral-light)] pt-[120px] pb-[var(--spacing-lg)] md:pt-[160px]">
       {/* 
         Layer 1: Background SVG Wrapper
         Must be at the lowest stacking context within the Hero.

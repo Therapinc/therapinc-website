@@ -32,7 +32,7 @@ export default function FaqSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#F4F3ED] py-24 sm:py-32">
       <div className="mx-auto w-full whitespace-normal break-normal px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '768px' }}>
-        
+
         {/* Section Header */}
         <div className="mb-16 flex flex-col items-center text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
@@ -64,9 +64,8 @@ export default function FaqSection() {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'mb-6 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'mb-6 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <p className="text-sm leading-relaxed text-gray-600">
                     {faq.answer}

@@ -6,7 +6,7 @@ export default function ParentPortalSection() {
     <section className="relative w-full overflow-hidden bg-[var(--color-primary)] py-24 sm:py-32">
       <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-8">
-          
+
           {/* Left Column: Content */}
           <div className="flex flex-col justify-center xl:max-w-[768px]">
             <div className="mb-6 flex items-center gap-3">
@@ -15,11 +15,11 @@ export default function ParentPortalSection() {
                 Parent Portal
               </h2>
             </div>
-            
+
             <h3 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl">
               Parents shouldn&apos;t have to wait for a meeting to know how their child is doing.
             </h3>
-            
+
             <p className="mb-10 text-lg leading-relaxed text-purple-200">
               Families can check in anytime — see how a therapy session went, how attendance looks this month, or read a simple summary of long-term progress.
             </p>
@@ -50,7 +50,7 @@ export default function ParentPortalSection() {
             <div className="relative flex w-[340px] flex-col rounded-[40px] bg-[#F4F3ED] p-4 pt-10 shadow-2xl ring-8 ring-white/10 sm:w-[380px]">
               {/* Speaker notch */}
               <div className="absolute top-4 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-gray-300"></div>
-              
+
               <div className="flex flex-col gap-4">
                 {/* Card 1 */}
                 <div className="rounded-2xl bg-white p-5 shadow-sm">

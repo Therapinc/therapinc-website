@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowRight, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +27,7 @@ export default function Navbar() {
         {/* Static Logo */}
         <Link
           href="/"
-          className="group relative -mt-[1px] -ml-[35px] flex items-center gap-1 overflow-hidden rounded-xl px-2"
+          className="group relative -mt-[1px] -ml-[35px] translate-x-[10px] md:translate-x-0 flex items-center gap-1 overflow-hidden rounded-xl px-2"
         >
           {/* Constant Glaze Shine Loop */}
           <div className="pointer-events-none absolute inset-0 z-30">
@@ -36,7 +37,7 @@ export default function Navbar() {
             <img
               src="/logosvg.svg?v=2"
               alt="TherapInc Icon"
-              className="h-[60px] w-auto object-contain"
+              className="h-[40px] md:h-[60px] w-auto object-contain"
             />
           </div>
 
@@ -49,7 +50,7 @@ export default function Navbar() {
                 visible: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
                 hidden: {},
               }}
-              className="flex items-center pb-1 font-sans text-[2rem] font-semibold tracking-tight"
+              className="flex items-center pb-1 font-sans text-[1.5rem] md:text-[2rem] font-semibold tracking-tight"
               style={{ color: '#200A67' }}
             >
               {/* "Therap" */}
@@ -110,16 +111,48 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* CTA Button */}
-        <div className="flex items-center">
-          <Link
-            href="#demo"
-            className="inline-flex items-center gap-[var(--spacing-xs)] rounded-[var(--radius-full)] bg-gradient-to-r from-[#200A67] via-[#581c87] to-[#c026d3] px-[var(--spacing-lg)] py-[var(--spacing-sm)] text-sm font-medium text-white shadow-sm transition-all hover:scale-105 hover:opacity-90"
+        {/* CTA Button & Mobile Toggle */}
+        <div className="flex items-center gap-3">
+          <div className={`transition-all duration-300 ${scrolled ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto'}`}>
+            <Link
+              href="#demo"
+              className="inline-flex items-center gap-[var(--spacing-xs)] rounded-[var(--radius-full)] bg-gradient-to-r from-[#200A67] via-[#581c87] to-[#c026d3] px-[var(--spacing-lg)] py-[var(--spacing-sm)] text-sm font-medium text-white shadow-sm transition-all hover:scale-105 hover:opacity-90"
+            >
+              Book a Demo <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          
+          {/* Hamburger Menu Toggle (Mobile Only) */}
+          <button 
+            className="md:hidden flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[#200A67] transition-colors hover:bg-gray-200"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            Book a Demo <ArrowRight className="h-4 w-4" />
-          </Link>
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 right-0 border-b border-gray-100 bg-white/95 px-[var(--spacing-md)] py-6 shadow-xl backdrop-blur-md md:hidden"
+          >
+            <nav className="flex flex-col gap-6 text-center text-lg font-medium text-gray-700">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Home</Link>
+              <Link href="#features" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Features</Link>
+              <Link href="#solutions" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Solutions</Link>
+              <Link href="#about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">About Us</Link>
+              <Link href="#resources" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Resources</Link>
+              <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Contact</Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

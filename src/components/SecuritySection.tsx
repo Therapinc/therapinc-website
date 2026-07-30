@@ -13,7 +13,7 @@ export default function SecuritySection() {
     <section className="relative w-full overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1550px' }}>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-8">
-          
+
           {/* Left Column: Content */}
           <div className="flex flex-col justify-center xl:max-w-[768px]">
             <div className="mb-6 flex items-center gap-3">
@@ -22,11 +22,11 @@ export default function SecuritySection() {
                 Security & Compliance
               </h2>
             </div>
-            
+
             <h3 className="mb-6 font-heading text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
               Sensitive records deserve serious protection.
             </h3>
-            
+
             <p className="mb-8 text-lg leading-relaxed text-gray-600">
               Student and therapy data is sensitive by nature. Therapinc is built with encrypted storage, role-based access, and audit trails — so only the right people see the right records.
             </p>
