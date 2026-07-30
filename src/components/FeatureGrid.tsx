@@ -182,13 +182,13 @@ export default function FeatureGrid() {
 
           {/* Modal Panel */}
           <motion.div
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+            className="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto p-4 sm:items-center sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="relative w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+              className="relative mt-8 w-[min(92vw,42rem)] shrink-0 max-h-[calc(100vh-4rem)] overflow-hidden rounded-3xl bg-white shadow-2xl sm:mt-0"
               initial={{ scale: 0.88, y: 40, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 20, opacity: 0 }}
@@ -202,7 +202,7 @@ export default function FeatureGrid() {
               />
 
               {/* Content */}
-              <div className="p-8 sm:p-10">
+              <div className="max-h-[calc(100vh-4rem)] overflow-y-auto p-8 sm:p-10">
                 {/* Close button */}
                 <button
                   onClick={() => setSelected(null)}
@@ -262,22 +262,6 @@ export default function FeatureGrid() {
                   ))}
                 </ul>
 
-                {/* CTA */}
-                <motion.div
-                  className="mt-10"
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.55, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <a
-                    href="#demo"
-                    onClick={() => setSelected(null)}
-                    className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
-                    style={{ background: selected.accentColor }}
-                  >
-                    Book a Demo
-                  </a>
-                </motion.div>
               </div>
             </motion.div>
           </motion.div>

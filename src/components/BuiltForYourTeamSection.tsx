@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const cards = [
   {
@@ -24,7 +27,14 @@ export default function BuiltForYourTeamSection() {
       <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
         {/* Section Header */}
-        <div className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}>
+        <motion.div
+          className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal"
+          style={{ maxWidth: '768px' }}
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="mb-6 flex items-center gap-3">
             <div className="h-2 w-2 shrink-0 rounded-full bg-[var(--color-secondary)]"></div>
             <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
@@ -34,14 +44,22 @@ export default function BuiltForYourTeamSection() {
           <p className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
             Whoever&apos;s using it, it fits.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
           {cards.map((card, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 0.6,
+                delay: idx * 0.12,
+                ease: [0.16, 1, 0.3, 1],
+              }}
             >
               <span className="mb-6 text-xs font-bold tracking-widest text-[var(--color-secondary)] uppercase">
                 {card.role}
@@ -52,7 +70,7 @@ export default function BuiltForYourTeamSection() {
               <p className="text-sm leading-relaxed text-gray-600">
                 {card.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
