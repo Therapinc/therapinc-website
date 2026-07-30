@@ -43,11 +43,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} flex min-h-screen flex-col justify-between overflow-x-hidden font-sans antialiased`}
+        className={`${inter.variable} ${poppins.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <div className="flex min-h-screen flex-col justify-between overflow-x-hidden">
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <Analytics />
       </body>
     </html>
