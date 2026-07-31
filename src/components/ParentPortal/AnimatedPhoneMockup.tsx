@@ -77,7 +77,7 @@ export default function AnimatedPhoneMockup() {
       title: "Attendance Streak",
       desc: "Perfect attendance for 3 weeks in a row.",
       badge: "15 days",
-      badgeClass: "bg-amber-100 text-amber-700"
+      badgeClass: "bg-rose-100 text-rose-700"
     },
     {
       type: "message",
@@ -134,8 +134,8 @@ export default function AnimatedPhoneMockup() {
                 {card.type === 'chart' && (
                   <div className="flex items-end gap-1 mb-3 h-12 w-full">
                     {[40, 70, 50, 90, 60, 100, 80].map((h, i) => (
-                      <div key={i} className="flex-1 rounded-t-sm bg-amber-100 relative overflow-hidden" style={{ height: `${h}%` }}>
-                         {h === 100 && <div className="absolute inset-0 bg-amber-400 rounded-t-sm animate-pulse" />}
+                      <div key={i} className="flex-1 rounded-t-sm bg-rose-100 relative overflow-hidden" style={{ height: `${h}%` }}>
+                         {h === 100 && <div className="absolute inset-0 bg-rose-400 rounded-t-sm animate-pulse" />}
                       </div>
                     ))}
                   </div>

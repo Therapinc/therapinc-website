@@ -24,7 +24,7 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F4F3ED] pt-8 pb-24 sm:pt-12 sm:pb-32">
+    <section id="how-it-works" className="relative w-full overflow-hidden bg-[#F4F3ED] pt-8 pb-24 sm:pt-12 sm:pb-32">
       <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
         {/* Section Header */}
@@ -42,7 +42,7 @@ export default function HowItWorksSection() {
               How it works
             </h2>
           </div>
-          <p className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
+          <p className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--color-primary)] sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
             Set up in days, not semesters.
           </p>
         </motion.div>

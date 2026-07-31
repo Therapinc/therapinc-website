@@ -25,7 +25,7 @@ const problemCards = [
 
 export default function ProblemSection() {
   return (
-    <section className="relative z-20 w-full overflow-hidden bg-white pt-2 pb-40 sm:pt-4 sm:pb-48">
+    <section className="relative z-20 w-full overflow-hidden bg-[#F4F3ED] pt-2 pb-[85px] sm:pt-4 sm:pb-[117px]">
       <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
         {/* Left-Aligned Header Block — slides in from left */}
@@ -43,7 +43,7 @@ export default function ProblemSection() {
               The problem
             </h2>
           </div>
-          <p className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
+          <p className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--color-primary)] sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
             Special schools deserve better than paperwork.
           </p>
           <p className="mt-8 text-lg leading-relaxed text-gray-600 sm:text-xl">

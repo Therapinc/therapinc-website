@@ -100,14 +100,17 @@ export default function Navbar() {
           <Link href="#solutions" className="transition-colors hover:text-[var(--color-primary)]">
             Solutions
           </Link>
-          <Link href="#about" className="transition-colors hover:text-[var(--color-primary)]">
-            About Us
+          <Link href="#how-it-works" className="transition-colors hover:text-[var(--color-primary)]">
+            How it Works
           </Link>
-          <Link href="#resources" className="transition-colors hover:text-[var(--color-primary)]">
-            Resources
+          <Link href="#security" className="transition-colors hover:text-[var(--color-primary)]">
+            Security
           </Link>
-          <Link href="#contact" className="transition-colors hover:text-[var(--color-primary)]">
-            Contact
+          <Link href="#faq" className="transition-colors hover:text-[var(--color-primary)]">
+            FAQ
+          </Link>
+          <Link href="#pricing" className="transition-colors hover:text-[var(--color-primary)]">
+            Pricing
           </Link>
         </nav>
 
@@ -116,7 +119,7 @@ export default function Navbar() {
           <div className={`transition-all duration-300 ${scrolled ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto'}`}>
             <Link
               href="#demo"
-              className="inline-flex items-center gap-[var(--spacing-xs)] rounded-[var(--radius-full)] bg-gradient-to-r from-[#200A67] via-[#581c87] to-[#c026d3] px-[var(--spacing-lg)] py-[var(--spacing-sm)] text-sm font-medium text-white shadow-sm transition-all hover:scale-105 hover:opacity-90"
+              className="inline-flex items-center gap-[var(--spacing-xs)] rounded-full border border-white/50 bg-gradient-to-r from-[#200A67]/90 via-[#581c87]/90 to-[#c026d3]/90 px-[var(--spacing-lg)] py-[var(--spacing-sm)] text-sm font-semibold text-white shadow-[inset_0_2px_6px_rgba(255,255,255,0.8),inset_0_-4px_8px_rgba(0,0,0,0.3),0_8px_24px_rgba(192,38,211,0.5)] backdrop-blur-md transition-all hover:bg-gradient-to-r hover:from-[#200A67] hover:via-[#581c87] hover:to-[#c026d3] hover:shadow-[inset_0_6px_12px_rgba(0,0,0,0.4),inset_0_-2px_4px_rgba(255,255,255,0.5)]"
             >
               Book a Demo <ArrowRight className="h-4 w-4" />
             </Link>
@@ -146,9 +149,10 @@ export default function Navbar() {
               <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Home</Link>
               <Link href="#features" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Features</Link>
               <Link href="#solutions" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Solutions</Link>
-              <Link href="#about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">About Us</Link>
-              <Link href="#resources" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Resources</Link>
-              <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Contact</Link>
+              <Link href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">How it Works</Link>
+              <Link href="#security" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Security</Link>
+              <Link href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">FAQ</Link>
+              <Link href="#pricing" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[var(--color-primary)]">Pricing</Link>
             </nav>
           </motion.div>
         )}

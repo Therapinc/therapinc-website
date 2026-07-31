@@ -11,8 +11,8 @@ export default function ParentPortalSection() {
           {/* Left Column: Content */}
           <div className="flex flex-col justify-center xl:max-w-[768px]">
             <div className="mb-6 flex items-center gap-3">
-              <div className="h-2 w-2 shrink-0 rounded-full bg-amber-500"></div>
-              <h2 className="text-xs font-semibold tracking-widest text-amber-500 uppercase">
+              <div className="h-2 w-2 shrink-0 rounded-full bg-[var(--color-accent)]"></div>
+              <h2 className="text-xs font-semibold tracking-widest text-[var(--color-accent)] uppercase">
                 Parent Portal
               </h2>
             </div>
@@ -32,7 +32,7 @@ export default function ParentPortalSection() {
                 'Simple, jargon-free summaries — not clinical notes',
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <Check className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-[var(--color-accent)]" />
                   <span className="text-white">{item}</span>
                 </li>
               ))}
@@ -46,7 +46,9 @@ export default function ParentPortalSection() {
           </div>
 
           {/* Right Column: Phone Mockup */}
-          <AnimatedPhoneMockup />
+          <div className="translate-x-[20px]">
+            <AnimatedPhoneMockup />
+          </div>
 
         </div>
       </div>

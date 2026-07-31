@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
@@ -10,7 +11,13 @@ export default function Footer() {
         
         <div className="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column - Brand */}
-          <div className="lg:col-span-5">
+          <motion.div 
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <Link href="/" className="mb-6 flex items-center gap-4 text-[var(--color-primary)]">
               <img src="/logosvg.svg" alt="TherapInc Logo" className="h-16 w-16 object-contain" />
               <span className="font-heading text-3xl font-bold tracking-tight">TherapInc</span>
@@ -18,10 +25,16 @@ export default function Footer() {
             <p className="w-full whitespace-normal break-normal text-sm leading-relaxed text-gray-600" style={{ maxWidth: '320px' }}>
               Built for special education, everywhere.
             </p>
-          </div>
+          </motion.div>
 
           {/* Links Columns */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
+          <motion.div 
+            className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          >
             {/* Product */}
             <div className="flex flex-col">
               <h4 className="mb-6 text-xs font-bold tracking-widest text-gray-900 uppercase">
@@ -57,7 +70,7 @@ export default function Footer() {
                 <li><Link href="#terms" className="transition-colors hover:text-[var(--color-primary)]">Terms of service</Link></li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Bar */}

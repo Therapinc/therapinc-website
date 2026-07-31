@@ -272,35 +272,45 @@ export default function FeatureGrid() {
 
   return (
     <>
-      <section className="relative w-full -mt-32 overflow-hidden bg-gradient-to-b from-transparent via-[#F8F5FA] to-transparent pt-32 pb-48">
+      <section id="features" className="relative w-full -mt-32 overflow-hidden bg-gradient-to-b from-transparent via-[#F8F5FA] to-transparent pt-48 pb-[132px]">
         <div className="mx-auto w-full px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '1200px' }}>
 
           {/* Section Header */}
-          <div className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}>
+          <motion.div 
+            className="mb-16 flex w-full flex-col justify-center whitespace-normal break-normal" style={{ maxWidth: '768px' }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="mb-6 flex items-center gap-3">
               <div className="h-2 w-2 shrink-0 rounded-full bg-[var(--color-secondary)]"></div>
               <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
                 Features
               </h2>
             </div>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl" style={{ fontFamily: 'var(--font-heading)' }}>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-[var(--color-primary)] lg:text-4xl" style={{ fontFamily: 'var(--font-heading)' }}>
               One platform. Every part of your school&apos;s day.
             </p>
             <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
               Everything your staff, admins, and parents need — built around how special schools actually run.
             </p>
-          </div>
+          </motion.div>
 
           {/* 8 Cards Contiguous Grid */}
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-200">
             <div className="grid w-full grid-cols-1 gap-[1px] sm:grid-cols-2 lg:grid-cols-4">
               {features.map((feature, idx) => (
-                <button
+                <motion.button
                   key={idx}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: idx * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   onClick={() => setSelected(feature)}
-                  className="group flex h-full w-full cursor-pointer flex-col bg-white p-8 text-left transition-all duration-300 hover:bg-gray-50/50 hover:shadow-inner focus:outline-none"
+                  className="group flex h-full w-full cursor-pointer flex-col bg-white p-8 text-left transition-all duration-300 hover:bg-gray-50/50 hover:shadow-inner focus:outline-none hover:-translate-y-1"
                 >
-                  <span className="mb-6 text-sm font-bold text-orange-400">
+                  <span className="mb-6 text-sm font-bold text-[var(--color-primary)] transition-transform duration-300 group-hover:translate-x-1">
                     {String(idx + 1).padStart(2, '0')}
                   </span>
                   <h3 className="mb-3 font-heading text-xl font-bold text-gray-900 transition-colors group-hover:text-[var(--color-primary)]">
@@ -312,7 +322,7 @@ export default function FeatureGrid() {
                   <span className="mt-6 text-xs font-semibold tracking-wide text-[var(--color-secondary)] opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                     Learn more →
                   </span>
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>

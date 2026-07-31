@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Plus, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   {
@@ -30,21 +31,27 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#F4F3ED] py-24 sm:py-32">
+    <section id="faq" className="relative w-full overflow-hidden bg-[#F4F3ED] py-24 sm:py-32">
       <div className="mx-auto w-full whitespace-normal break-normal px-[var(--spacing-md)] lg:px-[var(--spacing-lg)]" style={{ maxWidth: '768px' }}>
 
         {/* Section Header */}
-        <div className="mb-16 flex flex-col items-center text-center">
+        <motion.div 
+          className="mb-16 flex flex-col items-center text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="mb-6 flex items-center justify-center gap-3">
-            <div className="h-2 w-2 shrink-0 rounded-full bg-amber-500"></div>
+            <div className="h-2 w-2 shrink-0 rounded-full bg-[var(--color-accent)]"></div>
             <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
               FAQ
             </h2>
           </div>
-          <p className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
+          <p className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--color-primary)] sm:text-5xl" style={{ fontFamily: 'var(--font-heading)' }}>
             Questions, answered
           </p>
-        </div>
+        </motion.div>
 
         {/* FAQ Accordion */}
         <div className="flex flex-col">
@@ -63,14 +70,21 @@ export default function FaqSection() {
                     {isOpen ? <X className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
                   </div>
                 </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'mb-6 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                >
-                  <p className="text-sm leading-relaxed text-gray-600">
-                    {faq.answer}
-                  </p>
-                </div>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden mb-6"
+                    >
+                      <p className="text-sm leading-relaxed text-gray-600">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
